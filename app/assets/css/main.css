@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --d4-purple: #5527a8;
+  --d4-deep-purple: #241052;
+  --d4-lavender: #f5efff;
+  --d4-ink: #211547;
+  --d4-muted: #6c6383;
+  --d4-border: #e7dcf8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  background: #ffffff;
+  color: var(--d4-ink);
+  font-family: 'DM Sans', sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: -0.03em;
+}
+
+::selection {
+  background: #dcc7ff;
+  color: var(--d4-deep-purple);
+}
+
+@layer components {
+  .page-shell {
+    @apply overflow-hidden bg-white;
+  }
+
+  .container-wide {
+    @apply mx-auto w-full max-w-[1240px] px-5 sm:px-8 lg:px-10;
+  }
+
+  .section-eyebrow {
+    @apply mb-3 inline-flex items-center gap-2 rounded-full border border-purple-200 bg-purple-50 px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-purple-700;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus-visible:ring-4 focus-visible:ring-purple-200 focus-visible:ring-offset-2;
+  }
+}
